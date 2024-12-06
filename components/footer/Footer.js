@@ -1,5 +1,9 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
+
+import Logo from "@/public/images/mainl.png"
+
 export default function Footer() {
   return (
     <footer className="bg-[#f8f8f8] py-10 px-8 text-gray-700 text-sm">
@@ -8,8 +12,7 @@ export default function Footer() {
         <div className="mb-8 md:mb-0 flex flex-col items-center md:items-start">
           <Link href="/">
           <div className="mb-4">
-            {/* Replace with your logo */}
-            <img src="/images/mainl.png" alt="Logo" className="h-8" />
+            <Image src={Logo} alt="Logo" height={32}/>
           </div>
           </Link>
           <p>StreamlineBio © 2024</p>

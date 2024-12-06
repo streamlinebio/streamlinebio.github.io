@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Logo from "@/public/images/mainl.png"
 
 export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +23,7 @@ export default function MainHeader() {
         >
           <div className="relative bg-transparent">
             <div>
-              <img src="/images/mainl.png" alt="Logo" className="h-8" />
+            <Image src={Logo} alt="Logo" height={32}/>
             </div>
           </div>
         </Link>

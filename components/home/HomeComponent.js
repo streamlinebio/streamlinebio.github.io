@@ -1,10 +1,15 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import MuxVideo from "@mux/mux-video-react";
 import MainHeader from "@/components/headers/MainHeader";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Logo from "@/public/images/mainl.png";
+
+import ManualImage from "@/public/images/Manual.svg";
+import DesireImage from "@/public/images/home2.png";
 
 const HomeComponent = () => {
   const [email, setEmail] = useState("");
@@ -172,8 +177,8 @@ const HomeComponent = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* First Image */}
           <div className="flex flex-col items-center">
-            <img
-              src="/images/Manual.svg"
+            <Image
+              src={ManualImage}
               alt="Lab Setup with Prodigy, Incubator, Lab Fridge, BSC, and LOVO"
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -184,8 +189,8 @@ const HomeComponent = () => {
 
           {/* Second Image */}
           <div className="flex flex-col items-center">
-            <img
-              src="/images/home2.png" // Replace with actual path
+            <Image
+              src={DesireImage}
               alt="Lab Setup with Quantum, Xuri, LOVO, Prodigy, and Robotic Arm"
               className="w-full h-auto rounded-lg shadow-lg"
             />

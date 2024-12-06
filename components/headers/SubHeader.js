@@ -1,11 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "@/public/images/mainl.png"
+
 const SubHeader = () => {
   return (
     <div>
       <section className="header-container header-container-solid">
         <Link href="/" className="w-inline-block">
           <div>
-            <img src="/images/mainl.png" alt="Logo" className="h-8" />
+            <Image src={Logo} alt="Logo" height={32}/>
           </div>
         </Link>
         <div className="nav-items-container">
