@@ -49,16 +49,14 @@ const HomeComponent = () => {
       body: body,
     });
     const data = await response.json();
-    if (!response.ok) {
-      setIsLoading(false);
-    }
-    if (data.success) {
-      setIsLoading(false);
+
+    if (response.ok) {
       setEmail("");
       setCompanyName("");
       setFirstName("");
       setLastName("");
     }
+    setIsLoading(false);
   };
 
   const handleScrollToSection = () => {
@@ -87,6 +85,7 @@ const HomeComponent = () => {
           className="absolute inset-0 w-full h-full object-cover z-0"
           width={"full"}
           height={"auto"}
+          style={{ aspectRatio: 16/9 }}
           autoPlay
           loop
           muted
@@ -119,6 +118,7 @@ const HomeComponent = () => {
           src="/images/AI-driven.mp4"
           type="video/mp4"
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ aspectRatio: 16/9 }}
           autoPlay
           loop
           muted
