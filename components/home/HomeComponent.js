@@ -44,9 +44,9 @@ const HomeComponent = () => {
     body.append('entry.1966440799', firstName)
     body.append('entry.926905817', lastName)
     body.append('entry.141784344', companyName)
-    body.append('entry.931051616', email)
+    body.append('entry.1766392166', email)
     body.append('fvv', '1')
-    body.append('fbzx', '5776119029100333410')
+    body.append('fbzx', '2059156909890723476')
     body.append('pageHistory', '0')
     const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSe1QOEiU2tsilu-RLlmXx1sBV1x4ylUd7XdKL7_a1KYTZYHTg/formResponse", {
       method: "POST",
