@@ -4,6 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import MuxVideo from "@mux/mux-video-react";
 import MainHeader from "@/components/headers/MainHeader";
+import WaitlistMessageModal from '@/components/Waitlist/MessageModal';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Logo from "@/public/images/mainl.png";
@@ -19,6 +20,8 @@ const HomeComponent = () => {
   const [emailError, setEmailError] = useState(false);
   const [firstName, setFirstName] = useState(""); // New state for First Name
   const [lastName, setLastName] = useState(""); // New state for Last Name
+
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   useEffect(() => {
     AOS.init({
@@ -38,6 +41,23 @@ const HomeComponent = () => {
     }
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    // Reset states when closing
+    setIsModalOpen(false);
+    setIsLoading(false);
+  };
+
+  const clearForm = () => {
+      setEmail("");
+      setCompanyName("");
+      setFirstName("");
+      setLastName("");
+  };
+
   const handleJoinWaitlist = async () => {
     setIsLoading(true);
     let body = new FormData();
@@ -53,15 +73,10 @@ const HomeComponent = () => {
       mode: "no-cors",
       body: body,
     });
-    const data = await response.json();
-
     if (response.ok) {
-      setEmail("");
-      setCompanyName("");
-      setFirstName("");
-      setLastName("");
+      clearForm();
+      setIsModalOpen(true);
     }
-    setIsLoading(false);
   };
 
   const handleScrollToSection = () => {
@@ -312,6 +327,18 @@ const HomeComponent = () => {
           muted
         />
       </section> */}
+      <WaitlistMessageModal isOpen={isModalOpen} onClose={closeModal}>
+        <div className="text-center">
+          <h2 className="text-xl font-semibold mb-4">Thank You!</h2>
+          <p className="text-black-600 mb-4">Your information has been successfully submitted.</p>
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+            onClick={closeModal}
+          >
+            Close
+          </button>
+        </div>
+      </WaitlistMessageModal>
     </>
   );
 };
