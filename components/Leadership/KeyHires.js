@@ -14,14 +14,14 @@ const KeyHires = () => {
       title: "Senior Mechanical Engineer",
       image: "/images/Melvin.jpeg", // No image for this member
       description:
-        "Melvin Liu, 6 years of experience in mechanical design",
+        "Melvin Liu, 6 years of experience in mechanical design.",
     },
     {
       name: "Larry Huang",
       title: "Senior Software Engineer",
       image: "/images/Larry.jpg", // No image for this member
       description:
-        "Larry Huang, 6 years of experience in software infrastructure.",
+        "Larry Huang, an experienced cloud-native software engineer on building SaaS platform.",
     },
   ];
 
