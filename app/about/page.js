@@ -40,8 +40,8 @@ export default function AboutPage() {
             <p className="list-disc pl-5 text-gray-700 leading-relaxed mb-4">
               Streamline Bio is solving critical challenges in cell and gene
               therapy (CGT) manufacturing process to make CGT accessible to
-              patients in need. 𝗜𝗻 𝗖𝗚𝗧, end-to-end 𝗮𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗼𝗻 𝗶𝘀 𝗼𝗳𝘁𝗲𝗻 𝗵𝗮𝗶𝗹𝗲𝗱 𝗮𝘀
-              𝘁𝗵𝗲 “𝗵𝗼𝗹𝘆 𝗴𝗿𝗮𝗶𝗹”, the solution to all the manufacturing problems
+              patients in need. <strong>In CGT</strong>, end-to-end <strong>automation is often hailed as the "holy grail"</strong>,
+              the solution to all the manufacturing problems
               and bottlenecks. However, CGT processes are inherently complex,
               multi-step, and notoriously variable; this makes it extremely
               difficult to develop an one-size-fits-all automation solution.
