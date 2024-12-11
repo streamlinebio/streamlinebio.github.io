@@ -21,7 +21,7 @@ const HomeComponent = () => {
   const [firstName, setFirstName] = useState(""); // New state for First Name
   const [lastName, setLastName] = useState(""); // New state for Last Name
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -330,7 +330,7 @@ const HomeComponent = () => {
       <WaitlistMessageModal isOpen={isModalOpen} onClose={closeModal}>
         <div className="text-center">
           <h2 className="text-xl font-semibold mb-4">Thank You!</h2>
-          <p className="text-black-600 mb-4">Your information has been successfully submitted.</p>
+          <p className="text-black-600 mb-4">Thank you for joining our waitlist! We're excited to have you on board. Stay tuned for updates—great things are coming your way!</p>
           <button
             className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
             onClick={closeModal}
