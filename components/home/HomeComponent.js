@@ -49,6 +49,7 @@ const HomeComponent = () => {
     // Reset states when closing
     setIsModalOpen(false);
     setIsLoading(false);
+    clearForm();
   };
 
   const clearForm = () => {
@@ -73,10 +74,7 @@ const HomeComponent = () => {
       mode: "no-cors",
       body: body,
     });
-    if (response.ok) {
-      clearForm();
-      setIsModalOpen(true);
-    }
+    openModal();
   };
 
   const handleScrollToSection = () => {
