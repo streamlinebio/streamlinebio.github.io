@@ -1,7 +1,7 @@
 import MainHeader from "@/components/headers/MainHeader";
 export const metadata = {
-  title: "About - StreamLine",
-  description: "About page of StreamLine",
+  title: "About - StreamlineBio",
+  description: "About page of Streamline Bio.",
 };
 
 export default function AboutLayout({ children }) {
