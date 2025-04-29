@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamline Bio - Coming Soon</title>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <style>
+    /* Ensure full-height flex centering */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #fff, #bbb);
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 400;
+    }
+    .container {
+      text-align: center;
+      padding: 1rem;
+      max-width: 90%;
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+      color: #333;
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    } 
+    h1 span {
+      display: inline-block;
+    }
+    .corpname {
+      font-style: oblique 10deg;
+      text-transform: uppercase;
+    }
+    /* Logo between text */
+    #logo {
+      width: 2em;
+      height: 2em;
+      margin: 0 0;
+      opacity: 0.7;
+    }
+    p {
+      font-size: 1.5rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+    /* Responsive breakpoints */
+    @media (max-width: 768px) {
+      h1 { font-size: 3rem; }
+      p { font-size: 1.25rem; }
+      #logo {
+        width: 2em;
+        height: 2em;
+        margin: 0 0.1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      #logo {
+        width: 2em;
+        height: 2em;
+        margin: 0 0.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="corpname">
+      <span>STREAMLINE</span>
+      <img src="/public/icon.svg" alt="Icon" id="logo">
+      <span>BIO</span>
+    </h1>
+    <p>Coming Soon</p>
+  </div>
+</body>
+</html>
